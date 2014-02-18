@@ -1,0 +1,68 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleKira" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+    <rule id="ruleKira" scope="public">
+        <tag>out.action=new Object(); </tag>
+        <one-of>
+            <item>
+                <ruleref uri="#ruleKira_1"/><tag>out.action = rules.ruleKira_1;</tag><tag>out.action._attributes.tts = "Tout de suite."</tag>
+            </item>
+        </one-of>
+        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/kira";</tag>
+    </rule>
+
+    <rule id="ruleKira_1" scope="public">
+        <example>Sarah, allume la lumière du salon</example>
+        <tag>out.action=new Object(); </tag>
+        <item>Sarah</item>
+
+         <one-of>
+             <!--    <item>descend l'ecran<tag>out.action.module="screen_down";</tag><tag>out.action.ttsAction="Je descend l'ecran";</tag></item>
+                <item>range l'ecran<tag>out.action.module="screen_up";</tag><tag>out.action.ttsAction="Je range l'ecran";</tag></item>
+                <item>remonte l'ecran<tag>out.action.module="screen_up";</tag><tag>out.action.ttsAction="Je range l'ecran";</tag></item>
+   -->
+                <item>Allume l'ampli<tag>out.action.module="ampli_onoff";</tag><tag>out.action.ttsAction="J'allume l'ampli";</tag></item>
+                <item>Eteind l'ampli<tag>out.action.module="ampli_onoff";</tag><tag>out.action.ttsAction="J'eteind l'ampli";</tag></item>
+                <item>monte le volume de l'ampli<tag>out.action.module="ampli_vol_up";</tag><tag>out.action.repeat=5;</tag><tag>out.action.ttsAction="Je monte le volume de l'ampli";</tag></item>
+                <item>augmente le volume de l'ampli<tag>out.action.module="ampli_vol_up";</tag><tag>out.action.repeat=5;</tag><tag>out.action.ttsAction="Je monte le volume de l'ampli";</tag></item>
+                <item>baisse le volume de l'ampli<tag>out.action.module="ampli_vol_down";</tag><tag>out.action.repeat=5;</tag><tag>out.action.ttsAction="Je baisse le volume de l'ampli";</tag></item>
+                <item>monte le son de l'ampli<tag>out.action.module="ampli_vol_up";</tag><tag>out.action.repeat=5;</tag><tag>out.action.repeat=5;</tag><tag>out.action.ttsAction="Je monte le volume de l'ampli";</tag></item>
+                <item>augmente le son de l'ampli<tag>out.action.module="ampli_vol_up";</tag><tag>out.action.repeat=5;</tag><tag>out.action.ttsAction="Je monte le volume de l'ampli";</tag></item>
+                <item>baisse le son de l'ampli<tag>out.action.module="ampli_vol_down";</tag><tag>out.action.repeat=5;</tag><tag>out.action.ttsAction="Je baisse le volume de l'ampli";</tag></item>
+                <item>met l'ampli sur le home cinema<tag>out.action.module="ampli_htpc";</tag><tag>out.action.ttsAction="Je met l'ampli sur Home cinema";</tag></item>
+                <item>met le son sur le home cinema<tag>out.action.module="ampli_htpc";</tag><tag>out.action.ttsAction="Je met l'ampli sur Home cinema";</tag></item>
+                <item>met le son sur le media center<tag>out.action.module="ampli_htpc";</tag><tag>out.action.ttsAction="Je met l'ampli sur Home cinema";</tag></item>
+                <item>met le son de la télé sur l'ampli<tag>out.action.module="ampli_source";</tag><tag>out.action.ttsAction="Je change de source";</tag></item>
+                <item>change de source sur l'ampli<tag>out.action.module="ampli_source";</tag><tag>out.action.ttsAction="Je change de source";</tag></item>
+                <!--<item>allume la télé<tag>out.action.module="tv_onoff";</tag><tag>out.action.ttsAction="J'allume la télé";</tag></item>-->
+             <item>allume le projecteur<tag>out.action.module="projo_on";</tag><tag>out.action.ttsAction="J'allume le projecteur";</tag></item>
+             <item>eteind le projecteur<tag>out.action.module="projo_off";</tag><tag>out.action.repeat=2;</tag><tag>out.action.ttsAction="J'eteind le projecteur";</tag></item>
+             <item>allume les laides<tag>out.action.module="led_on";</tag><tag>out.action.ttsAction="J'allume les leds";</tag></item>
+             <item>eteind les laides<tag>out.action.module="led_off";</tag><tag>out.action.ttsAction="J'eteind les leds";</tag></item>
+             <item>allume les laides en rouge<tag>out.action.module="led_rouge";</tag><tag>out.action.ttsAction="J'allume les leds en rouge";</tag></item>
+             <item>allume les laides en vert<tag>out.action.module="led_vert";</tag><tag>out.action.ttsAction="J'allume les leds en vert";</tag></item>
+             <item>allume les laides en jaune<tag>out.action.module="led_jaune";</tag><tag>out.action.ttsAction="J'allume les leds en jaune";</tag></item>
+             <item>allume les laides en bleu<tag>out.action.module="led_bleu";</tag><tag>out.action.ttsAction="J'allume les leds en bleu";</tag></item>
+             <item>allume les laides en vert clair<tag>out.action.module="led_vert_clair";</tag><tag>out.action.ttsAction="J'allume les leds en vert clair";</tag></item>
+             <item>allume les laides en bleu ciel<tag>out.action.module="led_bleu_ciel";</tag><tag>out.action.ttsAction="J'allume les leds en bleu ciel";</tag></item>
+             <item>allume les laides en mauve<tag>out.action.module="led_mauve";</tag><tag>out.action.ttsAction="J'allume les leds en mauve";</tag></item>
+             <item>allume les laides en rose<tag>out.action.module="led_rose";</tag><tag>out.action.ttsAction="J'allume les leds en rose";</tag></item>
+             <item>augmente la puissance des laides<tag>out.action.module="led_plus";</tag><tag>out.action.ttsAction="J'augmente la puissance des leds";</tag></item>
+             <item>baisse la puissance des laides<tag>out.action.module="led_moins";</tag><tag>out.action.ttsAction="Je baisse la puissance des leds";</tag></item>
+             <item>monte la puissance des laides<tag>out.action.module="led_plus";</tag><tag>out.action.ttsAction="J'augmente la puissance des leds";</tag></item>
+             <item>diminue la puissance des laides<tag>out.action.module="led_moins";</tag><tag>out.action.ttsAction="Je baisse la puissance des leds";</tag></item>
+             <item>allume les laides en blanc<tag>out.action.module="led_blanc";</tag><tag>out.action.ttsAction="J'allume les leds en blanc";</tag></item>
+             <item>ambiance disco<tag>out.action.module="led_disco";</tag><tag>out.action.ttsAction="Ambiance disco";</tag></item>
+             <item>ambiance discothèque<tag>out.action.module="led_disco";</tag><tag>out.action.ttsAction="Ambiance disco";</tag></item>
+             <item>coupe le son de la télé<tag>out.action.module="tv_mute";</tag><tag>out.action.ttsAction="Je coupe le son de la télé";</tag></item>
+             <item>baisse le son de la télé<tag>out.action.module="tv_vol_moins";</tag><tag>out.action.ttsAction="Je baisse le son de la télé";</tag></item>
+             <item>monte le son de la télé<tag>out.action.module="tv_vol_plus";</tag><tag>out.action.ttsAction="Je monte le son de la télé";</tag></item>
+             <item>change de source sur la télé<tag>out.action.module="tv_source";</tag><tag>out.action.ttsAction="Je change de source sur la télé";</tag></item>
+             <item>change la source de la télé<tag>out.action.module="tv_source";</tag><tag>out.action.ttsAction="Je change la source de la télé";</tag></item>
+
+         </one-of>
+
+
+        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/kira";</tag>
+    </rule>
+</grammar>
+              

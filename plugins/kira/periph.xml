@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peripheriques>
+
+    <periph nom="xx001" number="001"/>
+    <periph nom="xx002" number="002"/>
+    <periph nom="ampli_onoff" number="003"/>
+    <periph nom="ampli_vol_up" number="004"/>
+    <periph nom="ampli_vol_down" number="005"/>
+    <periph nom="ampli_htpc" number="006"/>
+    <periph nom="ampli_source" number="007"/>
+    <periph nom="tv_onoff" number="008"/>
+    <periph nom="projo_on" number="009"/>
+    <periph nom="projo_off" number="010"/>
+    <periph nom="led_on" number="011"/>
+    <periph nom="led_off" number="012"/>
+    <periph nom="led_rouge" number="013"/>
+    <periph nom="led_vert" number="014"/>
+    <periph nom="led_jaune" number="015"/>
+    <periph nom="led_bleu" number="016"/>
+    <periph nom="led_vert_clair" number="017"/>
+    <periph nom="led_bleu_ciel" number="018"/>
+    <periph nom="led_mauve" number="019"/>
+    <periph nom="led_rose" number="020"/>
+    <periph nom="led_plus" number="021"/>
+    <periph nom="led_moins" number="022"/>
+    <periph nom="led_blanc" number="023"/>
+    <periph nom="led_disco" number="024"/>
+    <periph nom="tv_mute" number="025"/>
+    <periph nom="tv_vol_moins" number="026"/>
+    <periph nom="tv_vol_plus" number="027"/>
+    <periph nom="tv_source" number="028"/>
+
+</peripheriques>
